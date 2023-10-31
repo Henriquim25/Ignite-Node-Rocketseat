@@ -4,7 +4,7 @@ import CreateCourseService from "./create-course-service";
 export function createCouse(request: Request, respose: Response) {
   CreateCourseService.execute({
     name: "Henrique",
-    educator: "Henrique",
+    educator: "alo",
     duration: 123,
   });
 

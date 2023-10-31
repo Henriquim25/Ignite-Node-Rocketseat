@@ -1,6 +1,6 @@
 interface Course {
   name: string;
-  duration: number;
+  duration?: number;
   educator: string;
 }
 

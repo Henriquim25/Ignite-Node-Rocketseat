@@ -1,8 +1,10 @@
-import express from "express";
-import { createCouse } from "./routes";
+import express from 'express';
+import { createCouse } from './routes';
 
 const app = express();
 
-app.get("/", createCouse);
+app.get('/', createCouse);
 
-app.listen(3333);
+app.listen(3333, () => {
+  console.log('Servidor Rodando');
+});
