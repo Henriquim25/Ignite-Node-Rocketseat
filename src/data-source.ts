@@ -9,6 +9,7 @@ const connectionSource: DataSourceOptions = {
   password: "ignite",
   database: "rentx",
   migrations: ["./src/database/migrations/**/*.ts"],
+  entities:["./src/modules/cars/entities/**/*.ts"]
 };
 
 export const dataSource = new DataSource(connectionSource);

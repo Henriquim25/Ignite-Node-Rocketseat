@@ -9,14 +9,18 @@ const app = express();
 
 app.use(express.json());
 
-dataSource
-  .initialize()
-  .then(() => {
-    console.log("Data Source has been initialized!");
-  })
-  .catch((err) => {
-    console.error("Error during Data Source initialization", err);
-  });
+const database = async () => {
+  dataSource
+    .initialize()
+    .then(() => {
+      console.log("Data Source has been initialized!");
+    })
+    .catch((err) => {
+      console.error("Error during Data Source initialization", err);
+    });
+};
+
+database();
 
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
