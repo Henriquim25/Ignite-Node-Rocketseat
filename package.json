@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
-    "migration:run":"ts-node-dev ./node_modules/typeorm/cli.js migration:run -d ./src/data-source.ts",
-    "migration:revert":"ts-node-dev ./node_modules/typeorm/cli.js migration:revert -d ./src/data-source.ts"
+    "migration:run": "ts-node-dev ./node_modules/typeorm/cli.js migration:run -d ./src/data-source.ts",
+    "migration:revert": "ts-node-dev ./node_modules/typeorm/cli.js migration:revert -d ./src/data-source.ts"
   },
   "dependencies": {
     "csv-parse": "^5.5.3",
@@ -16,6 +16,7 @@
     "pg": "^8.11.3",
     "reflect-metadata": "^0.2.1",
     "swagger-ui-express": "^5.0.0",
+    "tsyringe": "^4.8.0",
     "typeorm": "^0.3.19",
     "uuid": "^9.0.1"
   },
