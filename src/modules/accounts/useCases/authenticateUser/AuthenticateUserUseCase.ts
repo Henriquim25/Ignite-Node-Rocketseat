@@ -1,5 +1,5 @@
 import { inject, injectable } from "tsyringe";
-import { UserRepository } from "../../repositories/implementations/UsersRepository";
+import {IUsersRepository} from "../../repositories/IUsersRepository";
 import { compare } from "bcrypt";
 import { sign } from "jsonwebtoken";
 import { AppError } from "../../../../errors/AppError";
@@ -21,7 +21,7 @@ interface IResponse {
 class AuthenticateUserUseCase {
   constructor(
     @inject("UserRepository")
-    private userRepository: UserRepository
+    private userRepository: IUsersRepository
   ) {}
   async execute({ email, password }): Promise<IResponse> {
     const user = await this.userRepository.findByEmail(email);
