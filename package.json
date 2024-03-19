@@ -8,7 +8,8 @@
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
     "migration:run": "ts-node-dev ./node_modules/typeorm/cli.js migration:run -d ./src/data-source.ts",
     "migration:revert": "ts-node-dev ./node_modules/typeorm/cli.js migration:revert -d ./src/data-source.ts",
-    "test": "jest"
+    "test": "jest",
+    "seed:admin":" ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
   },
   "dependencies": {
     "@types/jsonwebtoken": "^9.0.5",
